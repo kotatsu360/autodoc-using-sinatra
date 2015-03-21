@@ -7,9 +7,13 @@ describe 'hello API' do
   subject(:entry_point){ '/' }
   let(:json){ JSON.parse(last_response.body) }
   
-  context '正常終了' do
+  context 'request success' do
     before do
       get entry_point
+    end
+
+    it 'status code 200' do
+      expect(last_response.status).to eq(200)
     end
 
     it 'hello :)', autodoc: true do
