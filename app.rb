@@ -3,7 +3,7 @@
 require 'sinatra/base'
 require 'sinatra/json'
 
-module SinatraAutodoc
+module AutodocUsingSinatra
   class Server < Sinatra::Base
     
     get '/?' do
